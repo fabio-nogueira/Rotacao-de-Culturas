@@ -10,6 +10,26 @@ NESSE TRABALHO, desenvolvido durante a disciplina de Tópicos Especiais em Otimi
 
 # Construtor
 
-Importa uma planilha Excel xlsx com nome "RotacaoCulturas" e é exportada uma planilha excel "CulturaConstruida"
+Importa uma planilha Excel xlsx com nome "RotacaoCulturas" e é exportada uma planilha excel "CulturaConstruida".
+
+Esta heurística de construção tem o seguinte funcionamento conforme o artigo:
+1. Uma permutação aleatória (cíclica) das (N + 1) culturas é selecionada. 
+2. Para construir uma rotação em um lote, toma-se, na permutação, a primeira cultura que puder ser plantada no primeiro período. Uma vez que esta é encontrada, insere-se na programação e é escrita na matriz tantas vezes quanto for o seu ciclo de vida.
+3.Assim, a q-ésima cultura entrará na programação deste lote, se puder ser plantada no período "1 + Somatório ti, com i=1 e máximo q-1" e não for da mesma família botânica que a cultura q − 1, com excessão da cultura N + 1, que pode ser “cultivada” consecutivamente (pousio).
+4.Este processo se repete até que os M períodos sejam preenchidos.
+5. Finalmente, uma solução consistirá em repetir este processo L vezes.
+
+# Penalizador <Ainda Falta>
+  
+De modo a fazer os métodos convergirem para soluções factíveis, adotou-se uma metodologia de penalização de soluções infactíveis. Esta penalização, por sua vez, depende da quantidade de restriçõess que a programação em análise possui.Pretende-se fazer com que as soluções
+com poucas infactibilidades tenham seu lucro menos reduzido em comparação com uma que possui um elevado número de violações.
+
+P.V - Penalização de Vizinhos: lotes adjacentes há plantio de culturas da mesma família botânica.
+P.A.V - Penalização de Adubação Verde: Uma solução que possui r penalizações de adubaçao verde é aquela que não contemplou adubação verde em r lotes durante todo o período considerado.
+P.P - Penalização de Pousio: Similiar a P.A.V.
+P.A.D. - Penalização de Demanda: São computadas determinando-se a quantidade de culturas que não atenderam à demanda solicitada.
+P.A.L Precisa??
+
+
 
 
