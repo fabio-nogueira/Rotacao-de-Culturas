@@ -8,7 +8,7 @@ Para garantir a eficiência de um sistema de rotação de culturas existem algun
 
 NESSE TRABALHO, desenvolvido durante a disciplina de Tópicos Especiais em Otimização Linear na Universidade Federal Rural do Rio de Janeiro, é usado um algorítmo construtor e uma metaheurística (Simulated Annealing) para otimizar o problema combinatório de como fazer rotação de culturas levando em conta suas variáveis exponencias conforme o tamanho aumenta, de forma a maximizar o Lucro do agricultor.
 
-# Construtor
+# Construtor - Implementado
 
 Importa uma planilha Excel xlsx com nome "RotacaoCulturas" e é exportada uma planilha excel "CulturaConstruida".
 
@@ -19,7 +19,7 @@ Esta heurística de construção tem o seguinte funcionamento conforme o artigo:
 4.Este processo se repete até que os M períodos sejam preenchidos.
 5. Finalmente, uma solução consistirá em repetir este processo L vezes.
 
-# Penalizador <Ainda Falta>
+# Penalizador - Faltar implementar
   
 De modo a fazer os métodos convergirem para soluções factíveis, adotou-se uma metodologia de penalização de soluções infactíveis. Esta penalização, por sua vez, depende da quantidade de restriçõess que a programação em análise possui.Pretende-se fazer com que as soluções
 com poucas infactibilidades tenham seu lucro menos reduzido em comparação com uma que possui um elevado número de violações.
