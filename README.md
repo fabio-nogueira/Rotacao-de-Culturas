@@ -15,8 +15,8 @@ Importa uma planilha Excel xlsx com nome "RotacaoCulturas" e é exportada uma pl
 Esta heurística de construção tem o seguinte funcionamento conforme o artigo:
 1. Uma permutação aleatória (cíclica) das (N + 1) culturas é selecionada. 
 2. Para construir uma rotação em um lote, toma-se, na permutação, a primeira cultura que puder ser plantada no primeiro período. Uma vez que esta é encontrada, insere-se na programação e é escrita na matriz tantas vezes quanto for o seu ciclo de vida.
-3.Assim, a q-ésima cultura entrará na programação deste lote, se puder ser plantada no período "1 + Somatório ti, com i=1 e máximo q-1" e não for da mesma família botânica que a cultura q − 1, com excessão da cultura N + 1, que pode ser “cultivada” consecutivamente (pousio).
-4.Este processo se repete até que os M períodos sejam preenchidos.
+3. Assim, a q-ésima cultura entrará na programação deste lote, se puder ser plantada no período "1 + Somatório ti, com i=1 e máximo q-1" e não for da mesma família botânica que a cultura q − 1, com excessão da cultura N + 1, que pode ser “cultivada” consecutivamente (pousio).
+4. Este processo se repete até que os M períodos sejam preenchidos.
 5. Finalmente, uma solução consistirá em repetir este processo L vezes.
 
 # Penalizador - Faltar implementar
