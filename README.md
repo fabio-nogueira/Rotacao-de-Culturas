@@ -24,11 +24,11 @@ Esta heurística de construção tem o seguinte funcionamento conforme o artigo:
   De modo a fazer os métodos convergirem para soluções factíveis, adotou-se uma metodologia de penalização de soluções infactíveis. Esta penalização, por sua vez, depende da quantidade de restriçõess que a programação em análise possui.Pretende-se fazer com que as soluções
 com poucas infactibilidades tenham seu lucro menos reduzido em comparação com uma que possui um elevado número de violações.
 
-P.V - Penalização de Vizinhos: lotes adjacentes há plantio de culturas da mesma família botânica.
-P.A.V - Penalização de Adubação Verde: Uma solução que possui r penalizações de adubaçao verde é aquela que não contemplou adubação verde em r lotes durante todo o período considerado.
-P.P - Penalização de Pousio: Similiar a P.A.V.
-P.A.D. - Penalização de Demanda: São computadas determinando-se a quantidade de culturas que não atenderam à demanda solicitada.
-P.A.L Precisa??
+1. P.V - Penalização de Vizinhos: lotes adjacentes há plantio de culturas da mesma família botânica.
+2. P.A.V - Penalização de Adubação Verde: Uma solução que possui r penalizações de adubaçao verde é aquela que não contemplou adubação verde em r lotes durante todo o período considerado.
+3. P.P - Penalização de Pousio: Similiar a P.A.V.
+4. P.A.D. - Penalização de Demanda: São computadas determinando-se a quantidade de culturas que não atenderam à demanda solicitada.
+5. P.A.L Precisa??
 
 
 
