@@ -8,7 +8,7 @@ Para garantir a eficiência de um sistema de rotação de culturas existem algun
 
 NESSE TRABALHO, desenvolvido durante a disciplina de Tópicos Especiais em Otimização Linear na Universidade Federal Rural do Rio de Janeiro, é usado um algorítmo construtor e uma metaheurística (Simulated Annealing) para otimizar o problema combinatório de como fazer rotação de culturas levando em conta suas variáveis exponencias conforme o tamanho aumenta, de forma a maximizar o Lucro do agricultor.
 
-# Construtor - Implementado
+# Construtor - Implementado 17/06
 
 Importa uma planilha Excel xlsx com nome "RotacaoCulturas" e é exportada uma planilha excel "CulturaConstruida".
 
