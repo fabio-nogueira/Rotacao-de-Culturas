@@ -36,6 +36,8 @@ Dada uma solução qualquer S (com L linhas), um vizinho de S será uma matriz q
 
 # Simulated Annealing - Implementado
 
+Algoritmo de minimização: 
+
 ```
 Algoritmo 5 SA(f(.), V (.), α, SAmax, T0, Tf, s)
 1 s∗ ← s {Melhor solução até então obtida};
@@ -44,15 +46,15 @@ Algoritmo 5 SA(f(.), V (.), α, SAmax, T0, Tf, s)
 4 enquanto (T > Tf ) faça;
 5   enquanto (iterT < SAmax) faça;
 6     iterT ← iterT + 1;
-7     gere uma vizinhan¸ca em torno de V (s);
+7     gere uma vizinhança em torno de V (s);
 8     escolha aleatoriamente v ∈ V (s);
 9     Δ= f(v) − f(s);
 10    se (Δ < 0) ent˜ao
 11      s ← v;
-12      se (f(v) < f(s∗)) ent˜ao s∗ ← v;
+12      se (f(v) < f(s∗)) então s∗ ← v;
 13    senão;
 14      tome r ∈ [0, 1];
-15      se r < e−Δ/T ent˜ao s ← v;
+15      se r < e−Δ/T então s ← v;
 16    fim-se;
 17  fim-enquanto;
 18  T = α(T) {A temperatura é atualizada segundo uma regra α};
@@ -62,3 +64,4 @@ Algoritmo 5 SA(f(.), V (.), α, SAmax, T0, Tf, s)
 22 retorne s;
 fim SA
 ```
+Porém no código implementado usa-se Δ > 0, pois é um problema de maximização de lucro!
