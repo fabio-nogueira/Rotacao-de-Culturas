@@ -8,7 +8,7 @@
 
   NESSE TRABALHO, desenvolvido durante a disciplina de Tópicos Especiais em Otimização Linear na Universidade Federal Rural do Rio de Janeiro, é usado um algorítmo construtor e uma metaheurística (Simulated Annealing) para otimizar o problema combinatório de como fazer rotação de culturas levando em conta suas variáveis exponencias conforme o tamanho aumenta, de forma a maximizar o Lucro do agricultor.
 
-# Construtor - Implementado 17/06
+# Construtor - Implementado
 
 Importa uma planilha Excel xlsx com nome "RotacaoCulturas" e é exportada uma planilha excel "CulturaConstruida".
 
@@ -19,7 +19,7 @@ Esta heurística de construção tem o seguinte funcionamento conforme o artigo:
 4. Este processo se repete até que os M períodos sejam preenchidos.
 5. Finalmente, uma solução consistirá em repetir este processo L vezes.
 
-# Penalizador - Faltar implementar
+# Penalizador
   
   De modo a fazer os métodos convergirem para soluções factíveis, adotou-se uma metodologia de penalização de soluções infactíveis. Esta penalização, por sua vez, depende da quantidade de restriçõess que a programação em análise possui.Pretende-se fazer com que as soluções
 com poucas infactibilidades tenham seu lucro menos reduzido em comparação com uma que possui um elevado número de violações.
@@ -30,6 +30,33 @@ com poucas infactibilidades tenham seu lucro menos reduzido em comparação com 
 4. P.A.D. - Penalização de Demanda: São computadas determinando-se a quantidade de culturas que não atenderam à demanda solicitada.
 5. P.A.L Precisa??
 
+# Gerador de Vizinhança - Implementado
 
+Dada uma solução qualquer S (com L linhas), um vizinho de S será uma matriz que possui L − 1 linhas de S. A diferença entre elas está somente na linha faltante.
 
+# Simulated Annealing - Implementado
 
+Algoritmo 5 SA(f(.), V (.), α, SAmax, T0, Tf, s)
+1 s∗ ← s {Melhor solu¸c˜ao at´e ent˜ao obtida};
+2 iterT ← 0 {Contador de itera¸c˜oes numa isoterma T};
+3 T ← T0 {Temperatura corrente};
+4 enquanto (T > Tf ) faça;
+5   enquanto (iterT < SAmax) faça;
+6     iterT ← iterT + 1;
+7     gere uma vizinhan¸ca em torno de V (s);
+8     escolha aleatoriamente v ∈ V (s);
+9     Δ= f(v) − f(s);
+10    se (Δ < 0) ent˜ao
+11      s ← v;
+12      se (f(v) < f(s∗)) ent˜ao s∗ ← v;
+13    senão;
+14      tome r ∈ [0, 1];
+15      se r < e−Δ/T ent˜ao s ← v;
+16    fim-se;
+17  fim-enquanto;
+18  T = α(T) {A temperatura ´e atualizada segundo uma regra α};
+19  iterT ← 0;
+20 fim-enquanto;
+21 s ← s∗;
+22 retorne s;
+fim SA
