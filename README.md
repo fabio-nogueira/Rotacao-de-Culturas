@@ -1,4 +1,4 @@
-# Rotacao de Culturas
+# Rotação de Culturas
 
   É uma prática agrícola que consiste em alternar em uma mesma área diferentes culturas vegetais seguindo um plano definido anteriormente. Esta técnica visa tornar o sistema mais produtivo e ambientalmente mais sustentável, restabelecendo o equilíbrio biológico. Por outro lado, a monocultura é prejudicial ao solo, pois causa o empobrecimento nutricional devido à produção contínua de uma mesma planta, que absorve sempre os mesmos nutrientes, além de levar à ocorrência descontrolada de doenças, pragas e plantas daninhas.
 
