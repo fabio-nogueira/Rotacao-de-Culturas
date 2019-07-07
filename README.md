@@ -36,9 +36,10 @@ Dada uma solução qualquer S (com L linhas), um vizinho de S será uma matriz q
 
 # Simulated Annealing - Implementado
 
+```
 Algoritmo 5 SA(f(.), V (.), α, SAmax, T0, Tf, s)
-1 s∗ ← s {Melhor solu¸c˜ao at´e ent˜ao obtida};
-2 iterT ← 0 {Contador de itera¸c˜oes numa isoterma T};
+1 s∗ ← s {Melhor solução até então obtida};
+2 iterT ← 0 {Contador de iterações numa isoterma T};
 3 T ← T0 {Temperatura corrente};
 4 enquanto (T > Tf ) faça;
 5   enquanto (iterT < SAmax) faça;
@@ -54,9 +55,10 @@ Algoritmo 5 SA(f(.), V (.), α, SAmax, T0, Tf, s)
 15      se r < e−Δ/T ent˜ao s ← v;
 16    fim-se;
 17  fim-enquanto;
-18  T = α(T) {A temperatura ´e atualizada segundo uma regra α};
+18  T = α(T) {A temperatura é atualizada segundo uma regra α};
 19  iterT ← 0;
 20 fim-enquanto;
 21 s ← s∗;
 22 retorne s;
 fim SA
+```
